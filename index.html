@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - [Кайкен Дархан Орынбасарұлы]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion@10/dist/framer-motion.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            border-right: 2px solid #3b82f6;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #3b82f6; }
+        }
+        
+        .scroll-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .skill-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .language-bar {
+            transition: width 2s ease-in-out;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen">
+    <!-- Header Section -->
+    <header class="relative overflow-hidden bg-white shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-5"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-4 fade-in">
+                    [Ваше имя]
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 typing-animation fade-in stagger-1">
+                    Студент-программист | Web Developer | AI Enthusiast
+                </p>
+                <a href="/resume.pdf" 
+                   class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl fade-in stagger-2">
+                    <i class="fas fa-download mr-2"></i>
+                    📄 Скачать резюме
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16 fade-in">
+                Навыки и компетенции
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="skill-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200 fade-in stagger-1">
+                    <div class="text-center">
+                        <i class="fas fa-globe text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">🌐 Веб-разработка</h3>
+                        <p class="text-gray-600">HTML, CSS, JavaScript, React</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl border border-purple-200 fade-in stagger-2">
+                    <div class="text-center">
+                        <i class="fas fa-palette text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">🎨 UI/UX дизайн</h3>
+                        <p class="text-gray-600">Figma, Adobe Creative Suite</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl border border-green-200 fade-in stagger-3">
+                    <div class="text-center">
+                        <i class="fas fa-code text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">🐍 Python, ⚙️ C++</h3>
+                        <p class="text-gray-600">Программирование и алгоритмы</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl border border-orange-200 fade-in stagger-4">
+                    <div class="text-center">
+                        <i class="fas fa-brain text-4xl text-orange-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">🧠 Машинное обучение</h3>
+                        <p class="text-gray-600">ML, Deep Learning, AI</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl border border-red-200 fade-in stagger-5">
+                    <div class="text-center">
+                        <i class="fas fa-desktop text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">💻 Сборка и настройка ПК</h3>
+                        <p class="text-gray-600">Hardware, System Administration</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card bg-gradient-to-br from-indigo-50 to-indigo-100 p-8 rounded-xl border border-indigo-200 fade-in stagger-6">
+                    <div class="text-center">
+                        <i class="fas fa-print text-4xl text-indigo-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">🖨 Работа с принтерами</h3>
+                        <p class="text-gray-600">Принтеры и специализированное ПО</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16 fade-in">
+                Языки
+            </h2>
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg fade-in stagger-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-3">🇰🇿</span>
+                            <span class="text-xl font-semibold text-gray-900">Казахский</span>
+                        </div>
+                        <span class="text-lg text-gray-600">Родной</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="language-bar bg-gradient-to-r from-green-400 to-green-600 h-4 rounded-full" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg fade-in stagger-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-3">🇷🇺</span>
+                            <span class="text-xl font-semibold text-gray-900">Русский</span>
+                        </div>
+                        <span class="text-lg text-gray-600">Средний</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="language-bar bg-gradient-to-r from-blue-400 to-blue-600 h-4 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg fade-in stagger-3">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-3">🇬🇧</span>
+                            <span class="text-xl font-semibold text-gray-900">Английский</span>
+                        </div>
+                        <span class="text-lg text-gray-600">Elementary</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="language-bar bg-gradient-to-r from-purple-400 to-purple-600 h-4 rounded-full" style="width: 40%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates & Gallery Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16 fade-in">
+                Сертификаты и проекты
+            </h2>
+            <div class="relative">
+                <div id="gallery-container" class="flex space-x-6 overflow-x-auto scroll-container pb-4">
+                    <!-- Изображения будут загружены автоматически из /public/uploads/ -->
+                </div>
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 opacity-0 transition-opacity duration-300" id="scroll-indicator">
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-400 mt-2 fade-in stagger-2">
+                Поддерживаемые форматы: JPG, PNG, GIF, WebP
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg mb-4 fade-in">© 2024 [Ваше имя]. Все права защищены.</p>
+            <div class="flex justify-center space-x-6 fade-in stagger-1">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <i class="fab fa-telegram text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Загрузка изображений из папки uploads
+        async function loadGalleryImages() {
+            const galleryContainer = document.getElementById('gallery-container');
+            const scrollIndicator = document.getElementById('scroll-indicator');
+            
+            try {
+                // Список ваших изображений в папке uploads
+                // Обновите этот список при добавлении новых файлов
+                const imageFiles = [
+                    '20250301_004141.jpg',
+                    'englsih_a1_skyeng.jpg',
+                    'IMG-20250228-WA0136.jpg',
+                    'ww37zGScaCp7NRY74Vu6RZJPujcbPlTW.png'
+                ];
+                
+                // Альтернативный способ - попробовать загрузить все возможные файлы
+                // (раскомментируйте если хотите автоматическое сканирование)
+                /*
+                const commonNames = ['certificate', 'project', 'achievement', 'diploma', 'award'];
+                const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
+                const imageFiles = [];
+                
+                for (let i = 1; i <= 10; i++) {
+                    for (const name of commonNames) {
+                        for (const ext of extensions) {
+                            imageFiles.push(`${name}${i}${ext}`);
+                        }
+                    }
+                }
+                */
+                
+                let loadedImages = [];
+                
+                // Проверяем какие файлы существуют
+                for (const filename of imageFiles) {
+                    try {
+                        const img = new Image();
+                        img.src = `public/uploads/${filename}`;
+                        
+                        await new Promise((resolve, reject) => {
+                            img.onload = () => {
+                                // Генерируем понятные названия для изображений
+                                let altText = filename;
+                                if (filename.includes('english') || filename.includes('skyeng')) {
+                                    altText = 'Сертификат английского языка';
+                                } else if (filename.includes('20250301')) {
+                                    altText = 'Достижение';
+                                } else if (filename.includes('IMG-20250228')) {
+                                    altText = 'Проект';
+                                } else if (filename.includes('ww37zGScaCp7NRY74Vu6RZJPujcbPlTW')) {
+                                    altText = 'Сертификат';
+                                } else {
+                                    altText = filename.replace(/\.(jpg|png|jpeg|gif)$/i, '').replace(/[_-]/g, ' ');
+                                }
+                                
+                                loadedImages.push({
+                                    src: `public/uploads/${filename}`,
+                                    alt: altText
+                                });
+                                resolve();
+                            };
+                            img.onerror = () => reject();
+                        });
+                    } catch (error) {
+                        console.log(`Файл ${filename} не найден`);
+                    }
+                }
+                
+                // Если нет загруженных изображений, показываем placeholder
+                if (loadedImages.length === 0) {
+                    const placeholderImages = [
+                        { src: 'https://via.placeholder.com/300x200/3b82f6/ffffff?text=Добавьте+изображения', alt: 'Добавьте изображения' },
+                        { src: 'https://via.placeholder.com/300x200/8b5cf6/ffffff?text=в+папку+uploads', alt: 'в папку uploads' }
+                    ];
+                    loadedImages = placeholderImages;
+                }
+                
+                loadedImages.forEach((img, index) => {
+                    const imageCard = document.createElement('div');
+                    imageCard.className = 'flex-shrink-0 group cursor-pointer';
+                    imageCard.style.animationDelay = `${index * 0.1}s`;
+                    imageCard.classList.add('fade-in');
+                    
+                    imageCard.innerHTML = `
+                        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                            <img src="${img.src}" alt="${img.alt}" class="w-80 h-56 object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                                <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                            </div>
+                        </div>
+                        <p class="text-center mt-3 text-gray-700 font-medium">${img.alt}</p>
+                    `;
+                    
+                    galleryContainer.appendChild(imageCard);
+                });
+                
+                // Показываем индикатор прокрутки если есть больше элементов чем помещается
+                if (loadedImages.length > 3) {
+                    scrollIndicator.style.opacity = '1';
+                }
+                
+            } catch (error) {
+                console.error('Ошибка загрузки изображений:', error);
+                galleryContainer.innerHTML = `
+                    <div class="text-center text-gray-500 col-span-full">
+                        <i class="fas fa-image text-4xl mb-4"></i>
+                        <p>Изображения не найдены. Добавьте JPG файлы в папку /public/uploads/</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Анимация появления элементов при скролле
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        }
+        
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', () => {
+            loadGalleryImages();
+            animateOnScroll();
+            
+            // Анимация языковых полос
+            setTimeout(() => {
+                document.querySelectorAll('.language-bar').forEach(bar => {
+                    bar.style.width = bar.style.width;
+                });
+            }, 1000);
+        });
+        
+        // Плавная прокрутка галереи
+        let isScrolling = false;
+        document.getElementById('gallery-container').addEventListener('scroll', () => {
+            if (!isScrolling) {
+                isScrolling = true;
+                requestAnimationFrame(() => {
+                    isScrolling = false;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
